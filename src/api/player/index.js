@@ -13,10 +13,10 @@ function verifyToken(req, res, next) {
     if (bearerToken == reqToken) {
       return next();
     }
-    res.sendStatus(403);
+    res.sendStatus(401);
   } else {
     // Forbidden
-    res.sendStatus(403);
+    res.sendStatus(401);
   }
 }
 
